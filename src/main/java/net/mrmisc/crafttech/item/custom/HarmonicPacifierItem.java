@@ -2,7 +2,6 @@ package net.mrmisc.crafttech.item.custom;
 
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.entity.ai.goal.Goal;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -17,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HarmonicPacifierItem extends Item {
-    private static final int EFFECT_RADIUS = 20; // Adjust as needed
+    private static final int EFFECT_RADIUS = 10; // Adjust as needed
     private static final int FREEZE_DURATION = 200; // 10 seconds (20 ticks per second)
 
     public HarmonicPacifierItem(Properties pProperties) {
@@ -45,17 +44,8 @@ public class HarmonicPacifierItem extends Item {
         AABB areaOfEffect = player.getBoundingBox().inflate(EFFECT_RADIUS);
         List<Monster> entities = world.getEntitiesOfClass(Monster.class, areaOfEffect);
         List<Monster> entitiesCopy = new ArrayList<>(entities);
-
         for (Monster entity : entitiesCopy) {
-            MobEffectInstance freezeEffect = new MobEffectInstance(ModEffects.FREEZE.get(), FREEZE_DURATION, 1);
-            entity.addEffect(freezeEffect);
-            boolean entityTargetCheck = entity.getTarget() == null;
-            if(freezeEffect.getDuration() <= 1 && entityTargetCheck) {
-                entity.removeEffect(ModEffects.FREEZE.get());
-                entity.goalSelector.enableControlFlag(Goal.Flag.TARGET);
-                entity.targetSelector.enableControlFlag(Goal.Flag.TARGET);
-                entity.setTarget(player);
-            }
+            entity.addEffect(new MobEffectInstance(ModEffects.FREEZE.get(), FREEZE_DURATION, 1));
         }
     }
 }

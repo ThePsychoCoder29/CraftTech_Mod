@@ -1,0 +1,12 @@
+// 1.20.1	2024-03-28T15:43:25.2974761	Tags for minecraft:block mod id crafttech
+a62fe90b7f8738c4bc049f843dbc031e42e0e70e data/crafttech/tags/blocks/ore_extractor_valuables.json
+dac745907c0e3534f973547c2a0e49c3af7e27c5 data/forge/tags/blocks/needs_netherite_tool.json
+98c48bf7a80045239c87a631071e82a8aed666d0 data/minecraft/tags/blocks/logs_that_burn.json
+9b8a65bcd9ba5f19eeef47f087a1fad08982ce09 data/minecraft/tags/blocks/mineable/axe.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/blocks/mineable/hoe.json
+ae8e872dca47244c059245107de6683236a00d4e data/minecraft/tags/blocks/mineable/pickaxe.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/blocks/mineable/shovel.json
+676e91b10f10d8463d264b01595a532f82bbb37f data/minecraft/tags/blocks/needs_diamond_tool.json
+65e714c9635e7330bd2f8096abb1cb637c553c9a data/minecraft/tags/blocks/needs_iron_tool.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/blocks/needs_stone_tool.json
+9b4f59af5daaa7f4202ca1b1e3836080c6131697 data/minecraft/tags/blocks/planks.json

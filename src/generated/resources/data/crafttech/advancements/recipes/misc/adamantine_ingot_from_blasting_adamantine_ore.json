@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_adamantine_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "crafttech:adamantine_ore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "crafttech:adamantine_ingot_from_blasting_adamantine_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_adamantine_ore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "crafttech:adamantine_ingot_from_blasting_adamantine_ore"
+    ]
+  },
+  "sends_telemetry_event": false
+}

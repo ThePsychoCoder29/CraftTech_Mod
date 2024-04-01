@@ -1,0 +1,16 @@
+{
+  "values": [
+    "crafttech:adamantine_block",
+    "crafttech:adamantine_ore",
+    "crafttech:deepslate_adamantine_ore",
+    "crafttech:nether_adamantine_ore",
+    "crafttech:titanium_block",
+    "crafttech:titanium_ore",
+    "crafttech:deepslate_titanium_ore",
+    "crafttech:nether_titanium_ore",
+    "crafttech:platinum_ore",
+    "crafttech:deepslate_platinum_ore",
+    "crafttech:nether_platinum_ore",
+    "crafttech:platinum_block"
+  ]
+}

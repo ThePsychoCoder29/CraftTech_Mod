@@ -1,0 +1,18 @@
+{
+  "values": [
+    "crafttech:sapphire_block",
+    "crafttech:sapphire_ore",
+    "crafttech:deepslate_sapphire_ore",
+    "crafttech:cobalt_ore",
+    "crafttech:deepslate_cobalt_ore",
+    "crafttech:cobalt_block",
+    "crafttech:ruby_block",
+    "crafttech:ruby_ore",
+    "crafttech:deepslate_ruby_ore",
+    "crafttech:coconut_log",
+    "crafttech:coconut_wood",
+    "crafttech:stripped_coconut_log",
+    "crafttech:stripped_coconut_wood",
+    "crafttech:coconut_planks"
+  ]
+}

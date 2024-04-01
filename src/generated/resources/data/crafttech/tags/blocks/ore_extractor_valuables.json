@@ -1,0 +1,26 @@
+{
+  "values": [
+    "crafttech:sapphire_ore",
+    "crafttech:deepslate_sapphire_ore",
+    "crafttech:nether_sapphire_ore",
+    "crafttech:ruby_ore",
+    "crafttech:deepslate_ruby_ore",
+    "crafttech:nether_ruby_ore",
+    "crafttech:topaz_ore",
+    "crafttech:deepslate_topaz_ore",
+    "crafttech:nether_topaz_ore",
+    "crafttech:cobalt_ore",
+    "crafttech:deepslate_cobalt_ore",
+    "crafttech:nether_cobalt_ore",
+    "crafttech:platinum_ore",
+    "crafttech:deepslate_platinum_ore",
+    "crafttech:nether_platinum_ore",
+    "crafttech:titanium_ore",
+    "crafttech:deepslate_titanium_ore",
+    "crafttech:nether_titanium_ore",
+    "crafttech:adamantine_ore",
+    "crafttech:deepslate_adamantine_ore",
+    "crafttech:nether_adamantine_ore",
+    "#forge:ores"
+  ]
+}

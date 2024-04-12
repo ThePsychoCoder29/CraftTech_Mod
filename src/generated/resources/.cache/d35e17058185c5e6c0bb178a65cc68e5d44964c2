@@ -1,14 +1,25 @@
-// 1.20.1	2024-04-01T16:10:46.2393379	Item Models: crafttech
+// 1.20.1	2024-04-11T12:39:07.7390794	Item Models: crafttech
 4ba48a6afa2ae10c92d47989b164a22903132d65 assets/crafttech/models/item/adamantine_ingot.json
 5c3ca1519344767e0ea8519e4dd35364150e0e30 assets/crafttech/models/item/cobalt_ingot.json
+f4bb0ef2edde879796205d8a75de381c29a2f493 assets/crafttech/models/item/coconut_button.json
+c1bcc53477ed69e7e22639b8de42547b8b9980e6 assets/crafttech/models/item/coconut_coir.json
+dde3ca42be4507b17af1c59693fababbe458fc60 assets/crafttech/models/item/coconut_door.json
+d7f9f5dcb5f1d31d305966ec454da2aa04ae36d7 assets/crafttech/models/item/coconut_fence.json
+137ef605a3d6d1d353d0ef3404f4088659a14cea assets/crafttech/models/item/coconut_fence_gate.json
+89590cbb8b47868cfa0c0cfede53cb64330b8d78 assets/crafttech/models/item/coconut_pressure_plate.json
 7ddf3642e69696aee621fb061dedec81dcf596b0 assets/crafttech/models/item/coconut_sapling.json
+bd92550f865f1797e6c4f44e0787b04434d775df assets/crafttech/models/item/coconut_slab.json
+d47e7def739033998606b0b483b359966e66d3bb assets/crafttech/models/item/coconut_stairs.json
+fcd45030071ba74ab90d9bf3d0d1e53c86010b91 assets/crafttech/models/item/ethereal_elixir.json
 756d5ac896b019de04b3b3603c908b55592cbfe3 assets/crafttech/models/item/harmonic_pacifier.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/crafttech/models/item/hippo_spawn_egg.json
 21521bf65fa4eca7f7351fecba888c75c091cfed assets/crafttech/models/item/kunai.json
 17f5100ca3ec9230fc1f6ab4e184fc7508a261d2 assets/crafttech/models/item/ore_extractor.json
 068d3ebfb9199f10d08417c6b949b71abe83a43d assets/crafttech/models/item/platinum_ingot.json
 260ed48bf6b1a66f32b23b253b0cba3b256ffe05 assets/crafttech/models/item/ruby.json
 efb4ba558533497a5d8ffecbd3dc8b485dc803ba assets/crafttech/models/item/sapphire.json
-0216fe20044cc1a285b46495f3109b2d941b1ce5 assets/crafttech/models/item/temporary_teleporter_pearl.json
+1ab61cf6d1df6f45243eb36171ae300e3a061c9b assets/crafttech/models/item/temporary_teleporter_pearl.json
 5e001928bf448dcfbecfa4ffd4c5246780a0d4a0 assets/crafttech/models/item/titanium_ingot.json
 d6fff6b3682e51e43f957851bdfc759c7a0893ca assets/crafttech/models/item/topaz.json
 2931953dbdac621161d4e4a9723f11f2dad8510a assets/crafttech/models/item/wall_walking_wand.json
+ab0b575430ee3f95056bfa16bf09dea7b248fcbd assets/crafttech/models/item/weather_remote.json

@@ -1,5 +1,7 @@
-// 1.20.1	2024-03-28T15:43:25.2974761	Tags for minecraft:block mod id crafttech
+// 1.20.1	2024-04-02T14:44:34.6489338	Tags for minecraft:block mod id crafttech
 a62fe90b7f8738c4bc049f843dbc031e42e0e70e data/crafttech/tags/blocks/ore_extractor_valuables.json
+9abd0af73530be4cccd01213b6f330db54fcacab data/forge/tags/blocks/fences.json
+c453a8826b40fc810c6b56ae13f9c3be7091f64c data/forge/tags/blocks/fence_gates.json
 dac745907c0e3534f973547c2a0e49c3af7e27c5 data/forge/tags/blocks/needs_netherite_tool.json
 98c48bf7a80045239c87a631071e82a8aed666d0 data/minecraft/tags/blocks/logs_that_burn.json
 9b8a65bcd9ba5f19eeef47f087a1fad08982ce09 data/minecraft/tags/blocks/mineable/axe.json

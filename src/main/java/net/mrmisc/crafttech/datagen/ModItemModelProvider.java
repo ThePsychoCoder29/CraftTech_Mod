@@ -30,10 +30,25 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.COBALT_INGOT);
         simpleItem(ModItems.ORE_EXTRACTOR);
         simpleItem(ModItems.KUNAI);
+        simpleItem(ModItems.TEMPORARY_TELEPORTER_PEARL);
+        simpleItem(ModItems.COCONUT_COIR);
+        simpleItem(ModItems.ETHEREAL_ELIXIR);
+        simpleItem(ModItems.WEATHER_REMOTE);
+
         saplingItem(ModBlocks.COCONUT_SAPLING);
+        fenceItem(ModBlocks.COCONUT_FENCE, ModBlocks.COCONUT_PLANKS);
+        buttonItem(ModBlocks.COCONUT_BUTTON, ModBlocks.COCONUT_PLANKS);
+        doorItem(ModBlocks.COCONUT_DOOR);
+        evenSimplerBlockItem(ModBlocks.COCONUT_STAIRS);
+        evenSimplerBlockItem(ModBlocks.COCONUT_PRESSURE_PLATE);
+        evenSimplerBlockItem(ModBlocks.COCONUT_FENCE_GATE);
+        evenSimplerBlockItem(ModBlocks.COCONUT_SLAB);
+
         handHeldItem(ModItems.HARMONIC_PACIFIER);
         handHeldItem(ModItems.WALL_WALKING_WAND);
-        handHeldItem(ModItems.TEMPORARY_TELEPORTER_PEARL);
+
+        withExistingParent(ModItems.HIPPO_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

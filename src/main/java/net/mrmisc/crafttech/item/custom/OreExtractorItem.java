@@ -26,9 +26,6 @@ public class OreExtractorItem extends Item {
         super(pProperties);
 
     }
-
-
-
     @Override
     public InteractionResult useOn(UseOnContext pContext) {
         Level world = pContext.getLevel();

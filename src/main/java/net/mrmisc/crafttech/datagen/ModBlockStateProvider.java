@@ -18,6 +18,33 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+
+        // WOOD
+        blockWithItem(ModBlocks.GREEN_COCONUT);
+        blockWithItem(ModBlocks.COCONUT);
+        logBlock(((RotatedPillarBlock) ModBlocks.COCONUT_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.COCONUT_WOOD.get()), blockTexture(ModBlocks.COCONUT_LOG.get()), blockTexture(ModBlocks.COCONUT_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_COCONUT_LOG.get()), blockTexture(ModBlocks.STRIPPED_COCONUT_LOG.get()), new ResourceLocation(CraftTech.MOD_ID, "block/stripped_coconut_log_top"));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_COCONUT_WOOD.get()), blockTexture(ModBlocks.STRIPPED_COCONUT_LOG.get()), blockTexture(ModBlocks.STRIPPED_COCONUT_LOG.get()));
+        blockItem(ModBlocks.COCONUT_LOG);
+        blockItem(ModBlocks.COCONUT_WOOD);
+        blockItem(ModBlocks.STRIPPED_COCONUT_LOG);
+        blockItem(ModBlocks.STRIPPED_COCONUT_WOOD);
+        blockWithItem(ModBlocks.COCONUT_PLANKS);
+        leavesBlock(ModBlocks.COCONUT_LEAVES);
+        saplingBlock(ModBlocks.COCONUT_SAPLING);
+
+        // THINGS MADE WITH WOOD
+        stairsBlock((StairBlock) ModBlocks.COCONUT_STAIRS.get(), blockTexture(ModBlocks.COCONUT_PLANKS.get()));
+        slabBlock((SlabBlock) ModBlocks.COCONUT_SLAB.get(), blockTexture(ModBlocks.COCONUT_PLANKS.get()), blockTexture(ModBlocks.COCONUT_PLANKS.get()));
+        buttonBlock((ButtonBlock) ModBlocks.COCONUT_BUTTON.get(), blockTexture(ModBlocks.COCONUT_PLANKS.get()));
+        pressurePlateBlock((PressurePlateBlock) ModBlocks.COCONUT_PRESSURE_PLATE.get(), blockTexture(ModBlocks.COCONUT_PLANKS.get()));
+        fenceBlock((FenceBlock) ModBlocks.COCONUT_FENCE.get(), blockTexture(ModBlocks.COCONUT_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.COCONUT_FENCE_GATE.get(), blockTexture(ModBlocks.COCONUT_PLANKS.get()));
+        doorBlockWithRenderType(((DoorBlock) ModBlocks.COCONUT_DOOR.get()), modLoc("block/coconut_door_bottom"), modLoc("block/coconut_door_top"), "cutout");
+        trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.COCONUT_TRAPDOOR.get()), modLoc("block/coconut_trapdoor"),true, "cutout");
+
+        // NEW BLOCKS OF METALS AND GEMS
         blockWithItem(ModBlocks.SAPPHIRE_BLOCK);
         blockWithItem(ModBlocks.TITANIUM_BLOCK);
         blockWithItem(ModBlocks.TOPAZ_BLOCK);
@@ -26,6 +53,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.RUBY_BLOCK);
         blockWithItem(ModBlocks.COBALT_BLOCK);
 
+        // NEW ORES
         blockWithItem(ModBlocks.SAPPHIRE_ORE);
         blockWithItem(ModBlocks.DEEPSLATE_SAPPHIRE_ORE);
         blockWithItem(ModBlocks.NETHER_SAPPHIRE_ORE);
@@ -48,17 +76,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.DEEPSLATE_RUBY_ORE);
         blockWithItem(ModBlocks.NETHER_RUBY_ORE);
 
-        logBlock(((RotatedPillarBlock) ModBlocks.COCONUT_LOG.get()));
-        axisBlock(((RotatedPillarBlock) ModBlocks.COCONUT_WOOD.get()), blockTexture(ModBlocks.COCONUT_LOG.get()), blockTexture(ModBlocks.COCONUT_LOG.get()));
-        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_COCONUT_LOG.get()), blockTexture(ModBlocks.STRIPPED_COCONUT_LOG.get()), new ResourceLocation(CraftTech.MOD_ID, "block/stripped_coconut_log_top"));
-        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_COCONUT_WOOD.get()), blockTexture(ModBlocks.STRIPPED_COCONUT_LOG.get()), blockTexture(ModBlocks.STRIPPED_COCONUT_LOG.get()));
-        blockItem(ModBlocks.COCONUT_LOG);
-        blockItem(ModBlocks.COCONUT_WOOD);
-        blockItem(ModBlocks.STRIPPED_COCONUT_LOG);
-        blockItem(ModBlocks.STRIPPED_COCONUT_WOOD);
-        blockWithItem(ModBlocks.COCONUT_PLANKS);
-        leavesBlock(ModBlocks.COCONUT_LEAVES);
-        saplingBlock(ModBlocks.COCONUT_SAPLING);
+        simpleBlockWithItem(ModBlocks.ELEMENT_MIXER.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/element_fuser")));
+
     }
 
     private void leavesBlock(RegistryObject<Block> blockRegistryObject) {

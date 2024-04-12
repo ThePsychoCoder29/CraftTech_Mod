@@ -22,8 +22,11 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.HARMONIC_PACIFIER.get());
                         output.accept(ModItems.ORE_EXTRACTOR.get());
                         output.accept(ModItems.WALL_WALKING_WAND.get());
-                        output.accept(ModItems.TEMPORARY_TELEPORTER_PEARL.get());
                         output.accept(ModItems.KUNAI.get());
+                        output.accept(ModItems.TEMPORARY_TELEPORTER_PEARL.get());
+                        output.accept(ModItems.ETHEREAL_ELIXIR.get());
+                        output.accept(ModItems.WEATHER_REMOTE.get());
+                        output.accept(ModItems.HIPPO_SPAWN_EGG.get());
                         output.accept(ModItems.RUBY.get());
                         output.accept(ModItems.SAPPHIRE.get());
                         output.accept(ModItems.TOPAZ.get());
@@ -61,13 +64,25 @@ public class ModCreativeModTabs {
                         output.accept(ModBlocks.DEEPSLATE_COBALT_ORE.get());
                         output.accept(ModBlocks.NETHER_COBALT_ORE.get());
                         output.accept(ModBlocks.COBALT_BLOCK.get());
+
+
+                        output.accept(ModBlocks.GREEN_COCONUT.get());
+                        output.accept(ModBlocks.COCONUT.get());
                         output.accept(ModBlocks.COCONUT_LOG.get());
                         output.accept(ModBlocks.STRIPPED_COCONUT_LOG.get());
                         output.accept(ModBlocks.COCONUT_WOOD.get());
                         output.accept(ModBlocks.STRIPPED_COCONUT_WOOD.get());
                         output.accept(ModBlocks.COCONUT_PLANKS.get());
                         output.accept(ModBlocks.COCONUT_LEAVES.get());
-                        output.accept(ModBlocks.COCONUT_SAPLING.get());
+                        output.accept(ModBlocks.COCONUT_STAIRS.get());
+                        output.accept(ModBlocks.COCONUT_BUTTON.get());
+                        output.accept(ModBlocks.COCONUT_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.COCONUT_FENCE.get());
+                        output.accept(ModBlocks.COCONUT_FENCE_GATE.get());
+                        output.accept(ModBlocks.COCONUT_DOOR.get());
+                        output.accept(ModBlocks.COCONUT_TRAPDOOR.get());
+
+                        output.accept(ModBlocks.ELEMENT_MIXER.get());
 
                     })
                     .build());

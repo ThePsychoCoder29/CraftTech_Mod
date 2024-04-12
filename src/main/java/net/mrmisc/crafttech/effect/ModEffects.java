@@ -2,6 +2,7 @@ package net.mrmisc.crafttech.effect;
 
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -14,6 +15,8 @@ public class ModEffects {
 
     public static final RegistryObject<FreezeEffect> FREEZE = MOB_EFFECTS.register("freeze",
             ()-> new FreezeEffect(MobEffectCategory.HARMFUL , 3124687));
+    public static final RegistryObject<EtherealEffect> ETHEREAL = MOB_EFFECTS.register("ethereal",
+            ()-> new EtherealEffect(MobEffectCategory.BENEFICIAL , 3124687));
 
     public static void register(IEventBus eventBus) {
         MOB_EFFECTS.register(eventBus);

@@ -1,6 +1,7 @@
 package net.mrmisc.crafttech;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraftforge.api.distmarker.Dist;
@@ -14,10 +15,14 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.mrmisc.crafttech.block.ModBlocks;
+import net.mrmisc.crafttech.block.entity.ModBlockEntities;
 import net.mrmisc.crafttech.effect.ModEffects;
 import net.mrmisc.crafttech.entity.ModEntities;
+import net.mrmisc.crafttech.entity.client.HippoRenderer;
 import net.mrmisc.crafttech.item.ModCreativeModTabs;
 import net.mrmisc.crafttech.item.ModItems;
+import net.mrmisc.crafttech.screen.ElementMixerScreen;
+import net.mrmisc.crafttech.screen.ModMenuTypes;
 import net.mrmisc.crafttech.worldgen.ModTrunkPlacerTypes;
 import net.mrmisc.crafttech.worldgen.tree.ModFoliagePlacers;
 import org.slf4j.Logger;
@@ -40,6 +45,8 @@ public class CraftTech {
         ModEffects.register(modEventBus);
         ModTrunkPlacerTypes.register(modEventBus);
         ModFoliagePlacers.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -67,7 +74,9 @@ public class CraftTech {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntities.KUNAI.get(), ThrownItemRenderer::new);
+            EntityRenderers.register(ModEntities.HIPPO.get(), HippoRenderer::new);
             EntityRenderers.register(ModEntities.TEMPORARY_TELEPORTER_PEARL.get(), ThrownItemRenderer::new);
+            MenuScreens.register(ModMenuTypes.ELEMENT_MIXER_MENU.get(), ElementMixerScreen::new);
         }
     }
 }

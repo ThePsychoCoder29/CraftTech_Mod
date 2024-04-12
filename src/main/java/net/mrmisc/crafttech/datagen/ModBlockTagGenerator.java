@@ -135,5 +135,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(BlockTags.PLANKS)
                 .add(ModBlocks.COCONUT_PLANKS.get());
+
+        this.tag(Tags.Blocks.FENCES)
+                .add(ModBlocks.COCONUT_FENCE.get());
+
+        this.tag(Tags.Blocks.FENCE_GATES)
+                .add(ModBlocks.COCONUT_FENCE_GATE.get());
     }
 }

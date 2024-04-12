@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "crafttech:block/coconut_slab"
+    },
+    "type=double": {
+      "model": "crafttech:block/coconut_planks"
+    },
+    "type=top": {
+      "model": "crafttech:block/coconut_slab_top"
+    }
+  }
+}

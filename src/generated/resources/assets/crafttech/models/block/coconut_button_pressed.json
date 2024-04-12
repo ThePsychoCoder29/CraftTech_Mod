@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_pressed",
+  "textures": {
+    "texture": "crafttech:block/coconut_planks"
+  }
+}

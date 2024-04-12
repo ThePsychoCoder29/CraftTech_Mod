@@ -28,8 +28,7 @@ public class OreExtractorItem extends Item {
     }
     @Override
     public InteractionResult useOn(UseOnContext pContext) {
-        Level world = pContext.getLevel();
-        this.world = world;
+        this.world = pContext.getLevel();
         if(!pContext.getLevel().isClientSide()) {
             BlockPos positionClicked = pContext.getClickedPos();
             Player player = pContext.getPlayer();
@@ -40,6 +39,7 @@ public class OreExtractorItem extends Item {
                 BlockState state = pContext.getLevel().getBlockState(targetPos);
 
                 if (isValuableBlock(state)) {
+                    assert player != null;
                     outputValuableCoordinates(targetPos, player, state.getBlock());
                     foundBlock = true;
                     break;
@@ -48,6 +48,7 @@ public class OreExtractorItem extends Item {
             }
 
             if(!foundBlock) {
+                assert player != null;
                 player.sendSystemMessage(Component.literal("No Valuables Found"));
             }
 

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "crafttech:block/element_fuser"
+      "model": "crafttech:block/element_mixer"
     }
   }
 }

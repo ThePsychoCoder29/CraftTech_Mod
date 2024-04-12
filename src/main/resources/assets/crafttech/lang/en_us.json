@@ -15,8 +15,8 @@
   "item.crafttech.coconut_coir" : "Coconut Coir",
   "item.crafttech.weather_remote" : "Weather Remote",
 
-  "item.crafttech.weather_remote.thunder": "Set Weather To Thunderstorm for 10 seconds",
-  "item.crafttech.weather_remote.rain": "Set Weather To Rain for 10 seconds",
+  "item.crafttech.weather_remote_thunder": "Set Weather To Thunderstorm for 10 seconds",
+  "item.crafttech.weather_remote_rain": "Set Weather To Rain for 10 seconds",
 
   "block.crafttech.ruby_ore" : "Ruby Ore",
   "block.crafttech.deepslate_ruby_ore" : "Deepslate Ruby Ore",
@@ -66,6 +66,8 @@
 
   "effect.crafttech.ethereal": "Ethereal Effect",
   "effect.crafttech.freeze": "Freeze Effect",
+
+  "entity.minecraft.villager.crafttech.ore_digger": "Ore Digger",
 
   "creativetab.crafttech_tab" : "CraftTech Tab",
   "tooltip.crafttech.ore_extractor.tooltip" : "Right-click on any block. If there is any Ore in that Y axis, you will get it in your inventory"

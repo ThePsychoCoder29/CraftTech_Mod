@@ -21,8 +21,11 @@ import net.mrmisc.crafttech.entity.ModEntities;
 import net.mrmisc.crafttech.entity.client.HippoRenderer;
 import net.mrmisc.crafttech.item.ModCreativeModTabs;
 import net.mrmisc.crafttech.item.ModItems;
+import net.mrmisc.crafttech.recipe.ModRecipes;
 import net.mrmisc.crafttech.screen.ElementMixerScreen;
 import net.mrmisc.crafttech.screen.ModMenuTypes;
+import net.mrmisc.crafttech.sound.ModSounds;
+import net.mrmisc.crafttech.villager.ModVillagers;
 import net.mrmisc.crafttech.worldgen.ModTrunkPlacerTypes;
 import net.mrmisc.crafttech.worldgen.tree.ModFoliagePlacers;
 import org.slf4j.Logger;
@@ -47,6 +50,9 @@ public class CraftTech {
         ModFoliagePlacers.register(modEventBus);
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
+        ModVillagers.register(modEventBus);
+        ModSounds.register(modEventBus);
+        ModRecipes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);

@@ -17,7 +17,7 @@ public class ElementMixerMenu extends AbstractContainerMenu {
     public final ElementMixerBlockEntity blockEntity;
     private final Level level;
     private final ContainerData data;
-    private static final int TE_INVENTORY_SLOT_COUNT = 2;
+    private static final int TE_INVENTORY_SLOT_COUNT = 3;
     private static final int HOTBAR_SLOT_COUNT = 9;
     private static final int PLAYER_INVENTORY_ROW_COUNT = 3;
     private static final int PLAYER_INVENTORY_COLUMN_COUNT = 9;
@@ -56,11 +56,11 @@ public class ElementMixerMenu extends AbstractContainerMenu {
         int maxProgress = this.data.get(1);
         int progressArrowSize = 37;
 
-        return maxProgress != 0 && maxProgress != 0 ? progress * progressArrowSize / maxProgress : 0;
+        return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
     }
     // CREDIT GOES TO: diesieben07 | https://github.com/diesieben07/SevenCommons
     @Override
-    public ItemStack quickMoveStack(Player playerIn, int pIndex) {
+    public ItemStack quickMoveStack(Player player, int pIndex) {
         Slot sourceSlot = slots.get(pIndex);
         if (sourceSlot == null || !sourceSlot.hasItem()) return ItemStack.EMPTY;
         ItemStack sourceStack = sourceSlot.getItem();
@@ -87,7 +87,7 @@ public class ElementMixerMenu extends AbstractContainerMenu {
         else {
             sourceSlot.setChanged();
         }
-        sourceSlot.onTake(playerIn, sourceStack);
+        sourceSlot.onTake(player, sourceStack);
         return copyOfSourceStack;
     }
 
@@ -97,17 +97,17 @@ public class ElementMixerMenu extends AbstractContainerMenu {
                 player, ModBlocks.ELEMENT_MIXER.get());
     }
 
-    private void addPlayerInventory(Inventory pInventory) {
-        for(int i = 0; i < 3; ++i ){
-            for(int l = 0; l<9; ++l){
-                this.addSlot(new Slot(pInventory, l + i * 9 * 9, 8 + l * 18, 84 + i * 18));
+    private void addPlayerInventory(Inventory playerInventory) {
+        for (int i = 0; i < 3; ++i) {
+            for (int l = 0; l < 9; ++l) {
+                this.addSlot(new Slot(playerInventory, l + i * 9 + 9, 8 + l * 18, 84 + i * 18));
             }
         }
     }
 
-    private void addPlayerHotbar(Inventory pInventory) {
-        for(int i = 0; i < 9; ++i){
-            this.addSlot(new Slot(pInventory, i, 8 + i * 18, 142));
+    private void addPlayerHotbar(Inventory playerInventory) {
+        for (int i = 0; i < 9; ++i) {
+            this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 142));
         }
     }
 }

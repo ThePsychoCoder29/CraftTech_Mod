@@ -33,7 +33,7 @@ public class ElementMixerScreen extends AbstractContainerScreen<ElementMixerMenu
 
     private void renderProgressArrow(GuiGraphics guiGraphics, int x, int y) {
         if(menu.isCrafting()){
-            guiGraphics.blit(TEXTURE, x + 86, y + 20, 176, 0, 0, menu.getScaledProgress());
+            guiGraphics.blit(TEXTURE, x + 87, y + 19    , 178, 0, 0, menu.getScaledProgress());
         }
     }
 

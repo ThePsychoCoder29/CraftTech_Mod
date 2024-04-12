@@ -38,7 +38,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         saplingItem(ModBlocks.COCONUT_SAPLING);
         fenceItem(ModBlocks.COCONUT_FENCE, ModBlocks.COCONUT_PLANKS);
         buttonItem(ModBlocks.COCONUT_BUTTON, ModBlocks.COCONUT_PLANKS);
-        doorItem(ModBlocks.COCONUT_DOOR);
+        simpleBlockItem(ModBlocks.COCONUT_DOOR);
+        trapdoorItem(ModBlocks.COCONUT_TRAPDOOR);
         evenSimplerBlockItem(ModBlocks.COCONUT_STAIRS);
         evenSimplerBlockItem(ModBlocks.COCONUT_PRESSURE_PLATE);
         evenSimplerBlockItem(ModBlocks.COCONUT_FENCE_GATE);
@@ -69,10 +70,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
                 modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath() + "_bottom"));
     }
-    public void doorItem(RegistryObject<Block> block) {
-        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
-                modLoc("item/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath()));
-    }
     public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
                 .texture("texture",  new ResourceLocation(CraftTech.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
@@ -85,8 +82,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/handheld")).texture("layer0", new ResourceLocation(CraftTech.MOD_ID, "item/" + item.getId().getPath()));
     }
-    public void wallItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
-        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
-                .texture("wall",  new ResourceLocation(CraftTech.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(CraftTech.MOD_ID,"item/" + item.getId().getPath()));
     }
 }

@@ -1,15 +1,16 @@
-// 1.20.1	2024-04-11T12:39:07.7390794	Item Models: crafttech
+// 1.20.1	2024-04-12T16:06:56.9707129	Item Models: crafttech
 4ba48a6afa2ae10c92d47989b164a22903132d65 assets/crafttech/models/item/adamantine_ingot.json
 5c3ca1519344767e0ea8519e4dd35364150e0e30 assets/crafttech/models/item/cobalt_ingot.json
 f4bb0ef2edde879796205d8a75de381c29a2f493 assets/crafttech/models/item/coconut_button.json
 c1bcc53477ed69e7e22639b8de42547b8b9980e6 assets/crafttech/models/item/coconut_coir.json
-dde3ca42be4507b17af1c59693fababbe458fc60 assets/crafttech/models/item/coconut_door.json
+4e64116353051e01fc605ba1b0d40f26525f7741 assets/crafttech/models/item/coconut_door.json
 d7f9f5dcb5f1d31d305966ec454da2aa04ae36d7 assets/crafttech/models/item/coconut_fence.json
 137ef605a3d6d1d353d0ef3404f4088659a14cea assets/crafttech/models/item/coconut_fence_gate.json
 89590cbb8b47868cfa0c0cfede53cb64330b8d78 assets/crafttech/models/item/coconut_pressure_plate.json
 7ddf3642e69696aee621fb061dedec81dcf596b0 assets/crafttech/models/item/coconut_sapling.json
 bd92550f865f1797e6c4f44e0787b04434d775df assets/crafttech/models/item/coconut_slab.json
 d47e7def739033998606b0b483b359966e66d3bb assets/crafttech/models/item/coconut_stairs.json
+cf26d094fafa9ce9294f5c10ca658e916fde2688 assets/crafttech/models/item/coconut_trapdoor.json
 fcd45030071ba74ab90d9bf3d0d1e53c86010b91 assets/crafttech/models/item/ethereal_elixir.json
 756d5ac896b019de04b3b3603c908b55592cbfe3 assets/crafttech/models/item/harmonic_pacifier.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/crafttech/models/item/hippo_spawn_egg.json

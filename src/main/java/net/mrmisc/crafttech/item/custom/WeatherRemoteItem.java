@@ -38,11 +38,11 @@ public class WeatherRemoteItem extends Item implements WeatherRemoteItemUseMetho
 
     private static void setRain(CommandSourceStack pSource) {
         pSource.getLevel().setWeatherParameters(0, 200, true, false);
-        pSource.sendSuccess(() -> Component.translatable("item.crafttech.weather_remote.rain"), true);
+        pSource.sendSuccess(() -> Component.translatable("item.crafttech.weather_remote_rain"), true);
     }
 
     private static void setThunder(CommandSourceStack pSource) {
         pSource.getLevel().setWeatherParameters(0, 200, true, true);
-        pSource.sendSuccess(() -> Component.translatable("item.crafttech.weather_remote.thunder"), true);
+        pSource.sendSuccess(() -> Component.translatable("item.crafttech.weather_remote_thunder"), true);
     }
 }

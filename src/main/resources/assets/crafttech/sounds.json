@@ -1,0 +1,8 @@
+{
+  "ore_extractor_found_ore" : {
+    "subtitles": "sounds.crafttech.ore_extractor_found_ore",
+    "sounds": [
+      "crafttech:ore_extractor_found_ore"
+    ]
+  }
+}

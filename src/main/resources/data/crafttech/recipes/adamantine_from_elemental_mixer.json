@@ -1,0 +1,15 @@
+{
+  "type" : "crafttech:element_mixer",
+  "ingredients" : [
+    {
+      "item" : "crafttech:platinum_ingot"
+    },
+    {
+      "item" : "crafttech:titanium_ingot"
+    }
+  ],
+  "output" : {
+    "count": 1,
+    "item" : "crafttech:adamantine_ingot"
+  }
+}

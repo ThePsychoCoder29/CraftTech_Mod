@@ -90,25 +90,25 @@ public class ModConfiguredFeatures {
                         ModBlocks.PLATINUM_ORE.get().defaultBlockState()),
                 OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_PLATINUM_ORE.get().defaultBlockState()));
 
-        register(context, OVERWORLD_PLATINUM_ORE_KEY, Feature.ORE, new OreConfiguration(overworldPlatinumOres, 3));
+        register(context, OVERWORLD_PLATINUM_ORE_KEY, Feature.ORE, new OreConfiguration(overworldPlatinumOres, 6));
         register(context, NETHER_PLATINUM_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplacables,
-                ModBlocks.NETHER_PLATINUM_ORE.get().defaultBlockState(), netherVein));
+                ModBlocks.NETHER_PLATINUM_ORE.get().defaultBlockState(), 6));
 
         List<OreConfiguration.TargetBlockState> overworldTitaniumOres = List.of(OreConfiguration.target(stoneReplaceable,
                         ModBlocks.TITANIUM_ORE.get().defaultBlockState()),
                 OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_TITANIUM_ORE.get().defaultBlockState()));
 
-        register(context, OVERWORLD_TITANIUM_ORE_KEY, Feature.ORE, new OreConfiguration(overworldTitaniumOres, 5));
+        register(context, OVERWORLD_TITANIUM_ORE_KEY, Feature.ORE, new OreConfiguration(overworldTitaniumOres, 6));
         register(context, NETHER_TITANIUM_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplacables,
-                ModBlocks.NETHER_TITANIUM_ORE.get().defaultBlockState(), 5));
+                ModBlocks.NETHER_TITANIUM_ORE.get().defaultBlockState(), 6));
 
         List<OreConfiguration.TargetBlockState> overworldAdamantineOres = List.of(OreConfiguration.target(stoneReplaceable,
                         ModBlocks.ADAMANTINE_ORE.get().defaultBlockState()),
                 OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_ADAMANTINE_ORE.get().defaultBlockState()));
 
         register(context, OVERWORLD_ADAMANTINE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldAdamantineOres, 3));
-        register(context, NETHER_ADAMANTINE_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplacables,
-                ModBlocks.NETHER_ADAMANTINE_ORE.get().defaultBlockState(), 5));
+        register(context, NETHER_ADAMANTINE_ORE_KEY, Feature.SCATTERED_ORE, new OreConfiguration(netherrackReplacables,
+                ModBlocks.NETHER_ADAMANTINE_ORE.get().defaultBlockState(), 6));
 
         register(context, COCONUT_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.COCONUT_LOG.get()),

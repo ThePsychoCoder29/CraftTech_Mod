@@ -38,11 +38,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
         stairsBlock((StairBlock) ModBlocks.COCONUT_STAIRS.get(), blockTexture(ModBlocks.COCONUT_PLANKS.get()));
         slabBlock((SlabBlock) ModBlocks.COCONUT_SLAB.get(), blockTexture(ModBlocks.COCONUT_PLANKS.get()), blockTexture(ModBlocks.COCONUT_PLANKS.get()));
         buttonBlock((ButtonBlock) ModBlocks.COCONUT_BUTTON.get(), blockTexture(ModBlocks.COCONUT_PLANKS.get()));
+        buttonBlock((ButtonBlock) ModBlocks.TELEPORTER_BUTTON.get(), blockTexture(ModBlocks.SAPPHIRE_BLOCK.get()));
         pressurePlateBlock((PressurePlateBlock) ModBlocks.COCONUT_PRESSURE_PLATE.get(), blockTexture(ModBlocks.COCONUT_PLANKS.get()));
         fenceBlock((FenceBlock) ModBlocks.COCONUT_FENCE.get(), blockTexture(ModBlocks.COCONUT_PLANKS.get()));
         fenceGateBlock((FenceGateBlock) ModBlocks.COCONUT_FENCE_GATE.get(), blockTexture(ModBlocks.COCONUT_PLANKS.get()));
         doorBlockWithRenderType(((DoorBlock) ModBlocks.COCONUT_DOOR.get()), modLoc("block/coconut_door_bottom"), modLoc("block/coconut_door_top"), "cutout");
         trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.COCONUT_TRAPDOOR.get()), modLoc("block/coconut_trapdoor"),true, "cutout");
+        signBlock(((StandingSignBlock) ModBlocks.COCONUT_SIGN.get()), ((WallSignBlock) ModBlocks.COCONUT_WALL_SIGN.get()), blockTexture(ModBlocks.COCONUT_PLANKS.get()));
+        hangingSignBlock(ModBlocks.COCONUT_HANGING_SIGN.get(), ModBlocks.COCONUT_WALL_HANGING_SIGN.get(), blockTexture(ModBlocks.COCONUT_PLANKS.get()));
+
 
         // NEW BLOCKS OF METALS AND GEMS
         blockWithItem(ModBlocks.SAPPHIRE_BLOCK);
@@ -77,8 +81,25 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.NETHER_RUBY_ORE);
 
         simpleBlockWithItem(ModBlocks.ELEMENT_MIXER.get(),
-                new ModelFile.UncheckedModelFile(modLoc("block/element_fuser")));
+                new ModelFile.UncheckedModelFile(modLoc("block/element_mixer")));
 
+        blockWithItem(ModBlocks.TRAMPOLINE_BLOCK);
+
+    }
+
+    private String name(Block block){
+        return key(block).getPath();
+    }
+    private ResourceLocation key(Block block){
+        return ForgeRegistries.BLOCKS.getKey(block);
+    }
+    public void hangingSignBlock(Block signBlock, Block wallSignBlock, ResourceLocation texture){
+        ModelFile sign = models().sign(name(signBlock), texture);
+        hangingSignBlock(signBlock, wallSignBlock, sign);
+    }
+    public void hangingSignBlock(Block signBlock, Block wallSignBlock, ModelFile sign){
+        simpleBlock(signBlock, sign);
+        simpleBlock(wallSignBlock, sign);
     }
 
     private void leavesBlock(RegistryObject<Block> blockRegistryObject) {

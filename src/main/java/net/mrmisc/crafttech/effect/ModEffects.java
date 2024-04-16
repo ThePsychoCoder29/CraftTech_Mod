@@ -17,6 +17,8 @@ public class ModEffects {
             ()-> new FreezeEffect(MobEffectCategory.HARMFUL , 3124687));
     public static final RegistryObject<EtherealEffect> ETHEREAL = MOB_EFFECTS.register("ethereal",
             ()-> new EtherealEffect(MobEffectCategory.BENEFICIAL , 3124687));
+    public static final RegistryObject<GamemodeEffect> GAMEMODE = MOB_EFFECTS.register("gamemode",
+            ()-> new GamemodeEffect(MobEffectCategory.BENEFICIAL , 3124687));
 
     public static void register(IEventBus eventBus) {
         MOB_EFFECTS.register(eventBus);

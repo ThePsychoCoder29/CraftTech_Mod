@@ -83,19 +83,6 @@ public class ElementMixerBlockEntity extends BlockEntity implements MenuProvider
         }
         Containers.dropContents(this.level, this.worldPosition, inventory);
     }
-
-    public ItemStack getRenderStack(){
-        if(itemHandler.getStackInSlot(OUTPUT_SLOT).isEmpty()){
-            return itemHandler.getStackInSlot(LEFT_INPUT_SLOT);
-        }
-        else if (itemHandler.getStackInSlot(LEFT_INPUT_SLOT).isEmpty() && itemHandler.getStackInSlot(OUTPUT_SLOT).isEmpty()) {
-            return itemHandler.getStackInSlot(RIGHT_INPUT_SLOT);
-        }
-        else {
-            return itemHandler.getStackInSlot(OUTPUT_SLOT);
-        }
-    }
-
     @Override
     public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
         if(cap == ForgeCapabilities.ITEM_HANDLER){

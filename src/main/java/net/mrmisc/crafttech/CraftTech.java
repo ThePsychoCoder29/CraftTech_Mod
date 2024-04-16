@@ -2,6 +2,7 @@ package net.mrmisc.crafttech;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraftforge.api.distmarker.Dist;
@@ -19,12 +20,15 @@ import net.mrmisc.crafttech.block.entity.ModBlockEntities;
 import net.mrmisc.crafttech.effect.ModEffects;
 import net.mrmisc.crafttech.entity.ModEntities;
 import net.mrmisc.crafttech.entity.client.HippoRenderer;
+import net.mrmisc.crafttech.entity.client.ModBoatRenderer;
 import net.mrmisc.crafttech.item.ModCreativeModTabs;
 import net.mrmisc.crafttech.item.ModItems;
+import net.mrmisc.crafttech.potion.ModPotions;
 import net.mrmisc.crafttech.recipe.ModRecipes;
 import net.mrmisc.crafttech.screen.ElementMixerScreen;
 import net.mrmisc.crafttech.screen.ModMenuTypes;
 import net.mrmisc.crafttech.sound.ModSounds;
+import net.mrmisc.crafttech.util.ModWoodTypes;
 import net.mrmisc.crafttech.villager.ModVillagers;
 import net.mrmisc.crafttech.worldgen.ModTrunkPlacerTypes;
 import net.mrmisc.crafttech.worldgen.tree.ModFoliagePlacers;
@@ -36,7 +40,7 @@ public class CraftTech {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "crafttech";
     // Directly reference a slf4j logger
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public CraftTech() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -53,6 +57,7 @@ public class CraftTech {
         ModVillagers.register(modEventBus);
         ModSounds.register(modEventBus);
         ModRecipes.register(modEventBus);
+        ModPotions.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -79,9 +84,11 @@ public class CraftTech {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            Sheets.addWoodType(ModWoodTypes.COCONUT);
             EntityRenderers.register(ModEntities.KUNAI.get(), ThrownItemRenderer::new);
             EntityRenderers.register(ModEntities.HIPPO.get(), HippoRenderer::new);
-            EntityRenderers.register(ModEntities.TEMPORARY_TELEPORTER_PEARL.get(), ThrownItemRenderer::new);
+            EntityRenderers.register(ModEntities.MOD_BOAT.get(), context -> new ModBoatRenderer(context, false));
+            EntityRenderers.register(ModEntities.MOD_CHEST_BOAT.get(), context -> new ModBoatRenderer(context, true));
             MenuScreens.register(ModMenuTypes.ELEMENT_MIXER_MENU.get(), ElementMixerScreen::new);
         }
     }

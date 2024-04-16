@@ -1,4 +1,4 @@
-// 1.20.1	2024-04-11T16:18:27.9007093	Loot Tables
+// 1.20.1	2024-04-15T16:01:51.5462279	Loot Tables
 dcdf20d6507a1846f9896619ba277db728e9e6d4 data/crafttech/loot_tables/blocks/adamantine_block.json
 1bb9b179a7e423e7f1e971c64a5ed178286870d1 data/crafttech/loot_tables/blocks/adamantine_ore.json
 f89d2334f90a1e0b2592ddbc1c6a23960ee926e3 data/crafttech/loot_tables/blocks/cobalt_block.json
@@ -8,14 +8,18 @@ c7ec5812f64bb6c26337bf5a8e7bd45594de5bfc data/crafttech/loot_tables/blocks/cocon
 dee09a3c9c5f20998263007bbe2f17fca60581de data/crafttech/loot_tables/blocks/coconut_door.json
 fb55bc97fbc4e7e0f6d4b234cea500998c6c87eb data/crafttech/loot_tables/blocks/coconut_fence.json
 3daf7f6ab3de9ccfb67e545eda324466d8f36dd5 data/crafttech/loot_tables/blocks/coconut_fence_gate.json
+a3ec65e6de38edbba878d65d1e9ab915847e97a0 data/crafttech/loot_tables/blocks/coconut_hanging_sign.json
 f0a203ea13334dfa5c955f882a62d93d62360422 data/crafttech/loot_tables/blocks/coconut_leaves.json
 abd8f7d02b23dd5fc94cc649388b01932bd2f701 data/crafttech/loot_tables/blocks/coconut_log.json
 9abb6e68d038334018169f0b26eb6ca97b439fda data/crafttech/loot_tables/blocks/coconut_planks.json
 e97deed7aff4f8ffbb276a4e44785ae8929ec9f6 data/crafttech/loot_tables/blocks/coconut_pressure_plate.json
 98e5fc947ff65800d9dd0f9c819f3e13b68cfd0b data/crafttech/loot_tables/blocks/coconut_sapling.json
+5d524896b75410105131f3438cfc31622dca433d data/crafttech/loot_tables/blocks/coconut_sign.json
 241686fe9bb35e1407912755a8c982e7e5937ae1 data/crafttech/loot_tables/blocks/coconut_slab.json
 26cb08fa1c814e2c9e8c41bf3b1b7a969e949552 data/crafttech/loot_tables/blocks/coconut_stairs.json
 d035db6abdecbd5e821c8047222f1463eeb37e8a data/crafttech/loot_tables/blocks/coconut_trapdoor.json
+2dd44cfb4800e43cc2b6cd882df3699b188dbb5b data/crafttech/loot_tables/blocks/coconut_wall_hanging_sign.json
+e4a8629e3c1f81daeb6093f51e2c8ffb4f7c8cd4 data/crafttech/loot_tables/blocks/coconut_wall_sign.json
 723607765d8aa64a0f42c88071edb88698a79c81 data/crafttech/loot_tables/blocks/coconut_wood.json
 55ccd9a502e1556bc49b6862fde5a6b28568469d data/crafttech/loot_tables/blocks/deepslate_adamantine_ore.json
 0c73d4e4890aad0fc6f71f6476132e752b36e06e data/crafttech/loot_tables/blocks/deepslate_cobalt_ore.json
@@ -45,3 +49,4 @@ ebbc0ef24e4671606b9cf5e7a4e61110e064461e data/crafttech/loot_tables/blocks/titan
 d1f4c948956d91ed080d57873e5b54b5a3a8223f data/crafttech/loot_tables/blocks/titanium_ore.json
 d234a13d095ab5f6f22de4b6806d986b978fd709 data/crafttech/loot_tables/blocks/topaz_block.json
 0a820a6c41b2a58204e305543039cb70db90488e data/crafttech/loot_tables/blocks/topaz_ore.json
+287dff3974a2441aba0eddbfe902069a8937b808 data/crafttech/loot_tables/blocks/trampoline_block.json

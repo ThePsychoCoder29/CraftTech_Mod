@@ -15,9 +15,9 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.mrmisc.crafttech.CraftTech;
-import net.mrmisc.crafttech.block.custom.ElementMixer;
-import net.mrmisc.crafttech.block.custom.ModFlammableRotatedPillarBlock;
+import net.mrmisc.crafttech.block.custom.*;
 import net.mrmisc.crafttech.item.ModItems;
+import net.mrmisc.crafttech.util.ModWoodTypes;
 import net.mrmisc.crafttech.worldgen.tree.CoconutTreeGrower;
 
 import java.util.function.Supplier;
@@ -91,6 +91,8 @@ public class ModBlocks {
             ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> COCONUT_BUTTON = registerBlock("coconut_button",
             ()-> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON).sound(SoundType.WOOD), BlockSetType.OAK, 30, true));
+    public static final RegistryObject<Block> TELEPORTER_BUTTON = registerBlock("teleporter_button",
+            ()-> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.POLISHED_BLACKSTONE_BUTTON).sound(SoundType.METAL).noLootTable(), BlockSetType.OAK, 100, false));
     public static final RegistryObject<Block> COCONUT_PRESSURE_PLATE = registerBlock("coconut_pressure_plate",
             ()-> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).sound(SoundType.WOOD), BlockSetType.OAK));
     public static final RegistryObject<Block> COCONUT_FENCE_GATE = registerBlock("coconut_fence_gate",
@@ -115,6 +117,16 @@ public class ModBlocks {
             ()-> new SaplingBlock(new CoconutTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).sound(SoundType.CHERRY_SAPLING)));
     public static final RegistryObject<Block> ELEMENT_MIXER = registerBlock("element_mixer",
             ()-> new ElementMixer(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> TRAMPOLINE_BLOCK = registerBlock("trampoline_block",
+            ()-> new TrampolineBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+    public static final RegistryObject<Block> COCONUT_SIGN = BLOCKS.register("coconut_sign",
+            ()-> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.COCONUT));
+    public static final RegistryObject<Block> COCONUT_WALL_SIGN = BLOCKS.register("coconut_wall_sign",
+            ()-> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.COCONUT));
+    public static final RegistryObject<Block> COCONUT_HANGING_SIGN = BLOCKS.register("coconut_hanging_sign",
+            ()-> new ModHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.COCONUT));
+    public static final RegistryObject<Block> COCONUT_WALL_HANGING_SIGN = BLOCKS.register("coconut_wall_hanging_sign",
+            ()-> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.COCONUT));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name , Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name , block);

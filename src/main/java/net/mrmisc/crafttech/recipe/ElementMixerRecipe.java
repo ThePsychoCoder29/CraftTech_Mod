@@ -57,12 +57,12 @@ public class ElementMixerRecipe implements Recipe<SimpleContainer> {
 
     @Override
     public RecipeSerializer<?> getSerializer() {
-        return null;
+        return Serializer.INSTANCE;
     }
 
     @Override
     public RecipeType<?> getType() {
-        return null;
+        return Type.INSTANCE;
     }
 
     public static class Type implements RecipeType<ElementMixerRecipe> {

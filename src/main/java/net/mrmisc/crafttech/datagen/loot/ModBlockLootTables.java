@@ -25,6 +25,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     @Override
     protected void generate() {
         this.dropSelf(ModBlocks.ELEMENT_MIXER.get());
+        this.dropSelf(ModBlocks.TRAMPOLINE_BLOCK.get());
         this.dropSelf(ModBlocks.SAPPHIRE_BLOCK.get());
         this.dropSelf(ModBlocks.RUBY_BLOCK.get());
         this.dropSelf(ModBlocks.TOPAZ_BLOCK.get());
@@ -46,58 +47,36 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.COCONUT_FENCE.get());
         this.dropSelf(ModBlocks.COCONUT_FENCE_GATE.get());
         this.dropSelf(ModBlocks.COCONUT.get());
-        this.add(ModBlocks.COCONUT_DOOR.get(),
-                block -> createDoorTable(ModBlocks.COCONUT_DOOR.get()));
-        this.add(ModBlocks.COCONUT_SLAB.get(),
-                block -> createSlabItemTable(ModBlocks.COCONUT_SLAB.get()));
-        this.add(ModBlocks.GREEN_COCONUT.get(),
-                block -> createSingleResultBlockDrops(ModBlocks.GREEN_COCONUT.get(), ModBlocks.COCONUT.get()));
 
-        this.add(ModBlocks.COCONUT_LEAVES.get(),
-                block -> createLeavesDrops(block, ModBlocks.COCONUT_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
-        this.add(ModBlocks.SAPPHIRE_ORE.get(),
-                block -> createMultipleResultItemDrops(ModBlocks.SAPPHIRE_ORE.get(), ModItems.SAPPHIRE.get()));
-        this.add(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get(),
-                block -> createMultipleResultItemDrops(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get(), ModItems.SAPPHIRE.get()));
-        this.add(ModBlocks.NETHER_SAPPHIRE_ORE.get(),
-                block -> createMultipleResultItemDrops(ModBlocks.NETHER_SAPPHIRE_ORE.get(), ModItems.SAPPHIRE.get()));
-        this.add(ModBlocks.RUBY_ORE.get(),
-                block -> createMultipleResultItemDrops(ModBlocks.RUBY_ORE.get(), ModItems.RUBY.get()));
-        this.add(ModBlocks.DEEPSLATE_RUBY_ORE.get(),
-                block -> createMultipleResultItemDrops(ModBlocks.DEEPSLATE_RUBY_ORE.get(), ModItems.RUBY.get()));
-        this.add(ModBlocks.NETHER_RUBY_ORE.get(),
-                block -> createMultipleResultItemDrops(ModBlocks.NETHER_RUBY_ORE.get(), ModItems.RUBY.get()));
-        this.add(ModBlocks.TOPAZ_ORE.get(),
-                block -> createSingleResultItemDrops(ModBlocks.TOPAZ_ORE.get(), ModItems.TOPAZ.get()));
-        this.add(ModBlocks.DEEPSLATE_TOPAZ_ORE.get(),
-                block -> createSingleResultItemDrops(ModBlocks.DEEPSLATE_TOPAZ_ORE.get(), ModItems.TOPAZ.get()));
-        this.add(ModBlocks.NETHER_TOPAZ_ORE.get(),
-                block -> createSingleResultItemDrops(ModBlocks.NETHER_TOPAZ_ORE.get(), ModItems.TOPAZ.get()));
-        this.add(ModBlocks.ADAMANTINE_ORE.get(),
-                block -> createSingleResultItemDrops(ModBlocks.ADAMANTINE_ORE.get(), ModItems.ADAMANTINE_INGOT.get()));
-        this.add(ModBlocks.DEEPSLATE_ADAMANTINE_ORE.get(),
-                block -> createSingleResultItemDrops(ModBlocks.DEEPSLATE_ADAMANTINE_ORE.get(), ModItems.ADAMANTINE_INGOT.get()));
-        this.add(ModBlocks.NETHER_ADAMANTINE_ORE.get(),
-                block -> createSingleResultItemDrops(ModBlocks.NETHER_ADAMANTINE_ORE.get(), ModItems.ADAMANTINE_INGOT.get()));
-        this.add(ModBlocks.COBALT_ORE.get(),
-                block -> createMultipleResultItemDrops(ModBlocks.COBALT_ORE.get(), ModItems.COBALT_INGOT.get()));
-        this.add(ModBlocks.DEEPSLATE_COBALT_ORE.get(),
-                block -> createMultipleResultItemDrops(ModBlocks.DEEPSLATE_COBALT_ORE.get(), ModItems.COBALT_INGOT.get()));
-        this.add(ModBlocks.NETHER_COBALT_ORE.get(),
-                block -> createMultipleResultItemDrops(ModBlocks.NETHER_COBALT_ORE.get(), ModItems.COBALT_INGOT.get()));
-        this.add(ModBlocks.PLATINUM_ORE.get(),
-                block -> createSingleResultItemDrops(ModBlocks.PLATINUM_ORE.get(), ModItems.PLATINUM_INGOT.get()));
-        this.add(ModBlocks.DEEPSLATE_PLATINUM_ORE.get(),
-                block -> createSingleResultItemDrops(ModBlocks.DEEPSLATE_PLATINUM_ORE.get(), ModItems.PLATINUM_INGOT.get()));
-        this.add(ModBlocks.NETHER_PLATINUM_ORE.get(),
-                block -> createSingleResultItemDrops(ModBlocks.NETHER_PLATINUM_ORE.get(), ModItems.PLATINUM_INGOT.get()));
-        this.add(ModBlocks.TITANIUM_ORE.get(),
-                block -> createSingleResultItemDrops(ModBlocks.TITANIUM_ORE.get(), ModItems.TITANIUM_INGOT.get()));
-        this.add(ModBlocks.DEEPSLATE_TITANIUM_ORE.get(),
-                block -> createSingleResultItemDrops(ModBlocks.DEEPSLATE_TITANIUM_ORE.get(), ModItems.TITANIUM_INGOT.get()));
-        this.add(ModBlocks.NETHER_TITANIUM_ORE.get(),
-                block -> createSingleResultItemDrops(ModBlocks.NETHER_TITANIUM_ORE.get(), ModItems.TITANIUM_INGOT.get()));
-
+        this.add(ModBlocks.COCONUT_DOOR.get(), block -> createDoorTable(ModBlocks.COCONUT_DOOR.get()));
+        this.add(ModBlocks.COCONUT_SIGN.get(), block -> createSingleItemTable(ModBlocks.COCONUT_SIGN.get()));
+        this.add(ModBlocks.COCONUT_WALL_SIGN.get(), block -> createSingleItemTable(ModBlocks.COCONUT_SIGN.get()));
+        this.add(ModBlocks.COCONUT_HANGING_SIGN.get(), block -> createSingleItemTable(ModBlocks.COCONUT_HANGING_SIGN.get()));
+        this.add(ModBlocks.COCONUT_WALL_HANGING_SIGN.get(), block -> createSingleItemTable(ModBlocks.COCONUT_HANGING_SIGN.get()));
+        this.add(ModBlocks.COCONUT_SLAB.get(), block -> createSlabItemTable(ModBlocks.COCONUT_SLAB.get()));
+        this.add(ModBlocks.GREEN_COCONUT.get(), block -> createSingleResultBlockDrops(ModBlocks.GREEN_COCONUT.get(), ModBlocks.COCONUT.get()));
+        this.add(ModBlocks.COCONUT_LEAVES.get(), block -> createLeavesDrops(block, ModBlocks.COCONUT_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.add(ModBlocks.SAPPHIRE_ORE.get(), block -> createMultipleResultItemDrops(ModBlocks.SAPPHIRE_ORE.get(), ModItems.SAPPHIRE.get()));
+        this.add(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get(), block -> createMultipleResultItemDrops(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get(), ModItems.SAPPHIRE.get()));
+        this.add(ModBlocks.NETHER_SAPPHIRE_ORE.get(), block -> createMultipleResultItemDrops(ModBlocks.NETHER_SAPPHIRE_ORE.get(), ModItems.SAPPHIRE.get()));
+        this.add(ModBlocks.RUBY_ORE.get(), block -> createMultipleResultItemDrops(ModBlocks.RUBY_ORE.get(), ModItems.RUBY.get()));
+        this.add(ModBlocks.DEEPSLATE_RUBY_ORE.get(), block -> createMultipleResultItemDrops(ModBlocks.DEEPSLATE_RUBY_ORE.get(), ModItems.RUBY.get()));
+        this.add(ModBlocks.NETHER_RUBY_ORE.get(), block -> createMultipleResultItemDrops(ModBlocks.NETHER_RUBY_ORE.get(), ModItems.RUBY.get()));
+        this.add(ModBlocks.TOPAZ_ORE.get(), block -> createSingleResultItemDrops(ModBlocks.TOPAZ_ORE.get(), ModItems.TOPAZ.get()));
+        this.add(ModBlocks.DEEPSLATE_TOPAZ_ORE.get(), block -> createSingleResultItemDrops(ModBlocks.DEEPSLATE_TOPAZ_ORE.get(), ModItems.TOPAZ.get()));
+        this.add(ModBlocks.NETHER_TOPAZ_ORE.get(), block -> createSingleResultItemDrops(ModBlocks.NETHER_TOPAZ_ORE.get(), ModItems.TOPAZ.get()));
+        this.add(ModBlocks.ADAMANTINE_ORE.get(), block -> createSingleResultItemDrops(ModBlocks.ADAMANTINE_ORE.get(), ModItems.ADAMANTINE_INGOT.get()));
+        this.add(ModBlocks.DEEPSLATE_ADAMANTINE_ORE.get(), block -> createSingleResultItemDrops(ModBlocks.DEEPSLATE_ADAMANTINE_ORE.get(), ModItems.ADAMANTINE_INGOT.get()));
+        this.add(ModBlocks.NETHER_ADAMANTINE_ORE.get(), block -> createSingleResultItemDrops(ModBlocks.NETHER_ADAMANTINE_ORE.get(), ModItems.ADAMANTINE_INGOT.get()));
+        this.add(ModBlocks.COBALT_ORE.get(), block -> createMultipleResultItemDrops(ModBlocks.COBALT_ORE.get(), ModItems.COBALT_INGOT.get()));
+        this.add(ModBlocks.DEEPSLATE_COBALT_ORE.get(), block -> createMultipleResultItemDrops(ModBlocks.DEEPSLATE_COBALT_ORE.get(), ModItems.COBALT_INGOT.get()));
+        this.add(ModBlocks.NETHER_COBALT_ORE.get(), block -> createMultipleResultItemDrops(ModBlocks.NETHER_COBALT_ORE.get(), ModItems.COBALT_INGOT.get()));
+        this.add(ModBlocks.PLATINUM_ORE.get(), block -> createSingleResultItemDrops(ModBlocks.PLATINUM_ORE.get(), ModItems.PLATINUM_INGOT.get()));
+        this.add(ModBlocks.DEEPSLATE_PLATINUM_ORE.get(), block -> createSingleResultItemDrops(ModBlocks.DEEPSLATE_PLATINUM_ORE.get(), ModItems.PLATINUM_INGOT.get()));
+        this.add(ModBlocks.NETHER_PLATINUM_ORE.get(), block -> createSingleResultItemDrops(ModBlocks.NETHER_PLATINUM_ORE.get(), ModItems.PLATINUM_INGOT.get()));
+        this.add(ModBlocks.TITANIUM_ORE.get(), block -> createSingleResultItemDrops(ModBlocks.TITANIUM_ORE.get(), ModItems.TITANIUM_INGOT.get()));
+        this.add(ModBlocks.DEEPSLATE_TITANIUM_ORE.get(), block -> createSingleResultItemDrops(ModBlocks.DEEPSLATE_TITANIUM_ORE.get(), ModItems.TITANIUM_INGOT.get()));
+        this.add(ModBlocks.NETHER_TITANIUM_ORE.get(), block -> createSingleResultItemDrops(ModBlocks.NETHER_TITANIUM_ORE.get(), ModItems.TITANIUM_INGOT.get()));
 
     }
 

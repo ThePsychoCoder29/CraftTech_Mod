@@ -1,14 +1,14 @@
 package net.mrmisc.crafttech.effect;
 
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.attributes.AttributeMap;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.level.Level;
 
 public class EtherealEffect extends MobEffect {
-
-    private Level world;
 
     public EtherealEffect(MobEffectCategory category, int color) {
         super(category, color);
@@ -16,13 +16,19 @@ public class EtherealEffect extends MobEffect {
 
     @Override
     public void applyEffectTick(LivingEntity entity, int amplifier) {
-        super.applyEffectTick(entity, amplifier);
-        if (!world.isClientSide()) {
-            if (entity instanceof Player) {
-                Player player = (Player) entity;
-                player.noPhysics = true;
-                super.applyEffectTick(player, 1);
+        if(entity instanceof Player){
+            if(entity instanceof ServerPlayer){
+                entity.noPhysics = true;
+                entity.tick();
+                entity.noPhysics = true;
+
             }
         }
+        super.applyEffectTick(entity, amplifier);
+    }
+    
+    @Override
+    public boolean isDurationEffectTick(int pDuration, int pAmplifier) {
+        return true;
     }
 }

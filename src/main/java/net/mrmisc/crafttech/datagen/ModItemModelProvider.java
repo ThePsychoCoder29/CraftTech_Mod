@@ -30,7 +30,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.COBALT_INGOT);
         simpleItem(ModItems.ORE_EXTRACTOR);
         simpleItem(ModItems.KUNAI);
-        simpleItem(ModItems.TEMPORARY_TELEPORTER_PEARL);
         simpleItem(ModItems.COCONUT_COIR);
         simpleItem(ModItems.ETHEREAL_ELIXIR);
         simpleItem(ModItems.WEATHER_REMOTE);
@@ -38,12 +37,18 @@ public class ModItemModelProvider extends ItemModelProvider {
         saplingItem(ModBlocks.COCONUT_SAPLING);
         fenceItem(ModBlocks.COCONUT_FENCE, ModBlocks.COCONUT_PLANKS);
         buttonItem(ModBlocks.COCONUT_BUTTON, ModBlocks.COCONUT_PLANKS);
+        buttonItem(ModBlocks.TELEPORTER_BUTTON, ModBlocks.SAPPHIRE_BLOCK);
         simpleBlockItem(ModBlocks.COCONUT_DOOR);
         trapdoorItem(ModBlocks.COCONUT_TRAPDOOR);
         evenSimplerBlockItem(ModBlocks.COCONUT_STAIRS);
         evenSimplerBlockItem(ModBlocks.COCONUT_PRESSURE_PLATE);
         evenSimplerBlockItem(ModBlocks.COCONUT_FENCE_GATE);
         evenSimplerBlockItem(ModBlocks.COCONUT_SLAB);
+        simpleItem(ModItems.COCONUT_SIGN);
+        simpleItem(ModItems.COCONUT_HANGING_SIGN);
+        simpleItem(ModItems.COCONUT_BOAT);
+        simpleItem(ModItems.COCONUT_CHEST_BOAT);
+
 
         handHeldItem(ModItems.HARMONIC_PACIFIER);
         handHeldItem(ModItems.WALL_WALKING_WAND);

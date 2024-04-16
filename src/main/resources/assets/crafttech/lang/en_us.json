@@ -13,6 +13,8 @@
   "item.crafttech.flashlight" : "Flashlight",
   "item.crafttech.ethereal_elixir" : "Ethereal Elixir",
   "item.crafttech.coconut_coir" : "Coconut Coir",
+  "item.crafttech.coconut_boat" : "Coconut Boat",
+  "item.crafttech.coconut_chest_boat" : "Coconut Chest Boat",
   "item.crafttech.weather_remote" : "Weather Remote",
 
   "item.crafttech.weather_remote_thunder": "Set Weather To Thunderstorm for 10 seconds",
@@ -62,12 +64,21 @@
   "block.crafttech.coconut_trapdoor" : "Coconut Trapdoor",
   "block.crafttech.coconut_leaves" : "Coconut Leaves",
   "block.crafttech.coconut_sapling" : "Coconut Sapling",
+  "block.crafttech.coconut_sign" : "Coconut Sign",
+  "block.crafttech.coconut_hanging_sign" : "Coconut Hanging Sign",
   "block.crafttech.element_mixer" : "Element Mixer",
+  "block.crafttech.trampoline_block" : "Trampoline Block",
 
   "effect.crafttech.ethereal": "Ethereal Effect",
   "effect.crafttech.freeze": "Freeze Effect",
+  "effect.crafttech.gamemode": "Gamemode Effect",
 
   "entity.minecraft.villager.crafttech.ore_digger": "Ore Digger",
+  "entity.crafttech.mod_chest_boat": "Boat With Chest",
+
+  "item.minecraft.potion.effect.gamemode_potion" : "Gamemode Potion",
+  "item.minecraft.splash_potion.effect.gamemode_potion" : "Splash Potion of Gamemode",
+  "item.minecraft.lingering_potion.effect.gamemode_potion" : "Lingering Potion of Gamemode",
 
   "creativetab.crafttech_tab" : "CraftTech Tab",
   "tooltip.crafttech.ore_extractor.tooltip" : "Right-click on any block. If there is any Ore in that Y axis, you will get it in your inventory"

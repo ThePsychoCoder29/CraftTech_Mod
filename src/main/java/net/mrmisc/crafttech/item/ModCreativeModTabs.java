@@ -23,7 +23,6 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.ORE_EXTRACTOR.get());
                         output.accept(ModItems.WALL_WALKING_WAND.get());
                         output.accept(ModItems.KUNAI.get());
-                        output.accept(ModItems.TEMPORARY_TELEPORTER_PEARL.get());
                         output.accept(ModItems.ETHEREAL_ELIXIR.get());
                         output.accept(ModItems.WEATHER_REMOTE.get());
                         output.accept(ModItems.HIPPO_SPAWN_EGG.get());
@@ -34,6 +33,7 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.TITANIUM_INGOT.get());
                         output.accept(ModItems.ADAMANTINE_INGOT.get());
                         output.accept(ModItems.COBALT_INGOT.get());
+                        output.accept(ModItems.GAMEMODE_POTION.get());
 
 
                         output.accept(ModBlocks.RUBY_ORE.get());
@@ -81,8 +81,13 @@ public class ModCreativeModTabs {
                         output.accept(ModBlocks.COCONUT_FENCE_GATE.get());
                         output.accept(ModBlocks.COCONUT_DOOR.get());
                         output.accept(ModBlocks.COCONUT_TRAPDOOR.get());
+                        output.accept(ModItems.COCONUT_SIGN.get());
+                        output.accept(ModItems.COCONUT_HANGING_SIGN.get());
+                        output.accept(ModItems.COCONUT_BOAT.get());
+                        output.accept(ModItems.COCONUT_CHEST_BOAT.get());
 
                         output.accept(ModBlocks.ELEMENT_MIXER.get());
+                        output.accept(ModBlocks.TRAMPOLINE_BLOCK.get());
 
                     })
                     .build());

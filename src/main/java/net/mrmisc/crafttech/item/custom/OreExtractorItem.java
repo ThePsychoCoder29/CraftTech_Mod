@@ -1,5 +1,6 @@
 package net.mrmisc.crafttech.item.custom;
 
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -69,8 +70,13 @@ public class OreExtractorItem extends Item {
 
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
-        pTooltipComponents.add(Component.translatable("tooltip.crafttech.ore_extractor.tooltip"));
-        super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
+        if(Screen.hasShiftDown()){
+            pTooltipComponents.add(Component.translatable("tooltip.crafttech.ore_extractor.tooltip"));
+        }
+        else {
+            pTooltipComponents.add(Component.translatable("tooltip.crafttech.ore_extractor_shift.tooltip"));
+            super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
+        }
     }
 
     private void outputValuableCoordinates(BlockPos blockPos, Player player, Block block) {

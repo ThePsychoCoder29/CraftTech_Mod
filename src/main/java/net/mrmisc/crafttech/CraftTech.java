@@ -19,6 +19,7 @@ import net.mrmisc.crafttech.block.ModBlocks;
 import net.mrmisc.crafttech.block.entity.ModBlockEntities;
 import net.mrmisc.crafttech.effect.ModEffects;
 import net.mrmisc.crafttech.entity.ModEntities;
+import net.mrmisc.crafttech.entity.client.AirZombieRenderer;
 import net.mrmisc.crafttech.entity.client.HippoRenderer;
 import net.mrmisc.crafttech.entity.client.ModBoatRenderer;
 import net.mrmisc.crafttech.item.ModCreativeModTabs;
@@ -86,7 +87,9 @@ public class CraftTech {
         public static void onClientSetup(FMLClientSetupEvent event) {
             Sheets.addWoodType(ModWoodTypes.COCONUT);
             EntityRenderers.register(ModEntities.KUNAI.get(), ThrownItemRenderer::new);
+            EntityRenderers.register(ModEntities.TEMPORARY_TELEPORTER_PEARL.get(), ThrownItemRenderer::new);
             EntityRenderers.register(ModEntities.HIPPO.get(), HippoRenderer::new);
+            EntityRenderers.register(ModEntities.AIR_ZOMBIE.get(), AirZombieRenderer::new);
             EntityRenderers.register(ModEntities.MOD_BOAT.get(), context -> new ModBoatRenderer(context, false));
             EntityRenderers.register(ModEntities.MOD_CHEST_BOAT.get(), context -> new ModBoatRenderer(context, true));
             MenuScreens.register(ModMenuTypes.ELEMENT_MIXER_MENU.get(), ElementMixerScreen::new);

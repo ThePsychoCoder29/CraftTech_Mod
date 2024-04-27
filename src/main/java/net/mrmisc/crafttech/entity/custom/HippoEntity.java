@@ -75,7 +75,7 @@ public class HippoEntity extends Animal {
         this.walkAnimation.update(f, 0.2f);
     }
 
-    public static final AttributeSupplier.Builder createAttributes(){
+    public static AttributeSupplier.Builder createAttributes(){
         return Animal.createLivingAttributes()
                 .add(Attributes.MAX_HEALTH, 60D)
                 .add(Attributes.MOVEMENT_SPEED, 0.35D)
@@ -92,7 +92,8 @@ public class HippoEntity extends Animal {
         this.goalSelector.addGoal(1, new BreedGoal(this, 1.150D));
         this.goalSelector.addGoal(2, new TemptGoal(this, 1.2D, Ingredient.of(Items.MELON, Items.MELON_SLICE, Items.COOKED_CHICKEN, Items.COOKED_BEEF), false));
         this.goalSelector.addGoal(3, new FollowParentGoal(this, 1.2D));
-        this.goalSelector.addGoal(4, new HippoEntity.HippoGoToWaterGoal(this, 5.0));
+        this.goalSelector.addGoal(3, new HippoGoToWaterGoal(this, 2f));
+        this.goalSelector.addGoal(4, new TryFindWaterGoal(this));
         this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 5f));
         this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
     }

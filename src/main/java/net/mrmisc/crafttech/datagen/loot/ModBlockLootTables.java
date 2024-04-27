@@ -26,6 +26,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     protected void generate() {
         this.dropSelf(ModBlocks.ELEMENT_MIXER.get());
         this.dropSelf(ModBlocks.TRAMPOLINE_BLOCK.get());
+        this.dropSelf(ModBlocks.RAPIDITY_BLOCK.get());
+        this.dropSelf(ModBlocks.DASH_BLOCK .get());
         this.dropSelf(ModBlocks.SAPPHIRE_BLOCK.get());
         this.dropSelf(ModBlocks.RUBY_BLOCK.get());
         this.dropSelf(ModBlocks.TOPAZ_BLOCK.get());

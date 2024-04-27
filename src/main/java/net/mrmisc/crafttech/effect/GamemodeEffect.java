@@ -7,7 +7,9 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.GameType;
 import net.mrmisc.crafttech.CraftTech;
+import org.jetbrains.annotations.NotNull;
 
+import java.util.Objects;
 import java.util.Random;
 
 public class GamemodeEffect extends MobEffect {
@@ -18,18 +20,27 @@ public class GamemodeEffect extends MobEffect {
     }
 
     @Override
-    public void applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
+    public void applyEffectTick(@NotNull LivingEntity pLivingEntity, int pAmplifier) {
         if(pLivingEntity instanceof Player) {
             if (pLivingEntity instanceof ServerPlayer) {
-                if (gamemode == 1 || gamemode == 2) {
+                if
+                (gamemode == 1 || gamemode == 2) {
                     ((ServerPlayer) pLivingEntity).setGameMode(GameType.CREATIVE);
-                } else if (gamemode == 3 || gamemode == 4 || gamemode == 5) {
+                }
+                else if (gamemode == 3 || gamemode == 4 || gamemode == 5) {
                     ((ServerPlayer) pLivingEntity).setGameMode(GameType.SPECTATOR);
-                }else if (gamemode == 6 || gamemode == 7) {
+                }
+                else if (gamemode == 6 || gamemode == 7) {
                     ((ServerPlayer) pLivingEntity).setGameMode(GameType.ADVENTURE);
                 }
                 else {
                     ((ServerPlayer) pLivingEntity).setGameMode(GameType.SURVIVAL);
+                }
+                if(pLivingEntity.hasEffect(this)){
+                    double effectDuration = Objects.requireNonNull(pLivingEntity.getEffect(this)).getDuration();
+                    if(effectDuration <= 1){
+                        ((ServerPlayer) pLivingEntity).setGameMode(GameType.SURVIVAL);
+                    }
                 }
             }
         }

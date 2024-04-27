@@ -75,12 +75,6 @@ public class HippoModel<T extends Entity> extends HierarchicalModel<T> {
         this.head.xRot = headPitch * ((float)Math.PI / 180F);
     }
 
-    protected void animateRun(AnimationDefinition pAnimationDefinition, float pLimbSwing, float pLimbSwingAmount, float pMaxAnimationSpeed, float pAnimationScaleFactor) {
-        long $$5 = (long)(pLimbSwing * 100.0f * pMaxAnimationSpeed);
-        float $$6 = Math.min(pLimbSwingAmount * pAnimationScaleFactor, 2.0F);
-        KeyframeAnimations.animate(this, pAnimationDefinition, $$5, $$6, ANIMATION_VECTOR_CACHE);
-    }
-
 	@Override
 	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
 		hippo.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);

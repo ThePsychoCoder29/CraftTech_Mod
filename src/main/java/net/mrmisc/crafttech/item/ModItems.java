@@ -24,6 +24,8 @@ public class ModItems {
             () -> new HarmonicPacifierItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> WALL_WALKING_WAND = ITEMS.register("wall_walking_wand",
             () -> new WallWalkingWandItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> PET_HYPNOTIZER_WAND = ITEMS.register("pet_hypnotizer_wand",
+            () -> new PetHypnotizerWandItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> KUNAI = ITEMS.register("kunai",
             () -> new KunaiItem(new Item.Properties()));
     public static final RegistryObject<Item> RUBY = ITEMS.register("ruby",
@@ -42,6 +44,12 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> ORE_EXTRACTOR = ITEMS.register("ore_extractor",
             () -> new OreExtractorItem(new Item.Properties().durability(25)));
+    public static final RegistryObject<Item> TEMPORARY_TELEPORTER_PEARL = ITEMS.register("temporary_teleporter_pearl",
+            () -> new TemporaryTeleporterPearlItem(new Item.Properties()));
+    public static final RegistryObject<Item> MINERS_GEM = ITEMS.register("miners_gem",
+            () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> INSTAMINER_DRILL = ITEMS.register("instaminer_drill",
+            () -> new InstaMinerDrillItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> COCONUT_COIR = ITEMS.register("coconut_coir",
             () -> new FuelItem(new Item.Properties(), 400));
     public static final RegistryObject<Item> ETHEREAL_ELIXIR = ITEMS.register("ethereal_elixir",
@@ -58,9 +66,6 @@ public class ModItems {
             () -> new ModBoatItem(false, ModBoatEntity.Type.COCONUT, new Item.Properties()));
     public static final RegistryObject<Item> COCONUT_CHEST_BOAT = ITEMS.register("coconut_chest_boat",
             () -> new ModBoatItem(true, ModBoatEntity.Type.COCONUT, new Item.Properties()));
-    public static final RegistryObject<Item> GAMEMODE_POTION = ITEMS.register("gamemode_potion",
-            () -> new PotionItem(new Item.Properties()));
-
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

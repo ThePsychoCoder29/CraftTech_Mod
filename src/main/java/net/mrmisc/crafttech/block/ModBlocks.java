@@ -119,6 +119,10 @@ public class ModBlocks {
             ()-> new ElementMixer(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
     public static final RegistryObject<Block> TRAMPOLINE_BLOCK = registerBlock("trampoline_block",
             ()-> new TrampolineBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+    public static final RegistryObject<Block> RAPIDITY_BLOCK = registerBlock("rapidity_block",
+            ()-> new RapidityBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+    public static final RegistryObject<Block> DASH_BLOCK = registerBlock("dash_block",
+            ()-> new DashBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
     public static final RegistryObject<Block> COCONUT_SIGN = BLOCKS.register("coconut_sign",
             ()-> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.COCONUT));
     public static final RegistryObject<Block> COCONUT_WALL_SIGN = BLOCKS.register("coconut_wall_sign",

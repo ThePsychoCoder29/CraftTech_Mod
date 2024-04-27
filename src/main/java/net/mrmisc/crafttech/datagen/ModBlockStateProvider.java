@@ -1,8 +1,11 @@
 package net.mrmisc.crafttech.datagen;
 
 import net.minecraft.data.PackOutput;
+import net.minecraft.data.models.blockstates.*;
+import net.minecraft.data.models.model.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -11,7 +14,12 @@ import net.minecraftforge.registries.RegistryObject;
 import net.mrmisc.crafttech.CraftTech;
 import net.mrmisc.crafttech.block.ModBlocks;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Consumer;
+
 public class ModBlockStateProvider extends BlockStateProvider {
+
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, CraftTech.MOD_ID, exFileHelper);
     }
@@ -84,6 +92,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 new ModelFile.UncheckedModelFile(modLoc("block/element_mixer")));
 
         blockWithItem(ModBlocks.TRAMPOLINE_BLOCK);
+        blockWithItem(ModBlocks.RAPIDITY_BLOCK);
+        blockWithItem(ModBlocks.DASH_BLOCK);
 
     }
 
@@ -120,4 +130,5 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile(CraftTech.MOD_ID +
                 ":block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
     }
+
 }

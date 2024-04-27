@@ -1,4 +1,4 @@
-// 1.20.1	2024-04-14T16:20:10.1342428	Item Models: crafttech
+// 1.20.1	2024-04-19T22:32:47.3929784	Item Models: crafttech
 4ba48a6afa2ae10c92d47989b164a22903132d65 assets/crafttech/models/item/adamantine_ingot.json
 5c3ca1519344767e0ea8519e4dd35364150e0e30 assets/crafttech/models/item/cobalt_ingot.json
 0ffef0fc335c033fb6629689ca22ba16dc8ba1de assets/crafttech/models/item/coconut_boat.json
@@ -18,12 +18,16 @@ cf26d094fafa9ce9294f5c10ca658e916fde2688 assets/crafttech/models/item/coconut_tr
 fcd45030071ba74ab90d9bf3d0d1e53c86010b91 assets/crafttech/models/item/ethereal_elixir.json
 756d5ac896b019de04b3b3603c908b55592cbfe3 assets/crafttech/models/item/harmonic_pacifier.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/crafttech/models/item/hippo_spawn_egg.json
+9d96e6c9006ddb011a4c0759fc9d5cfc2b8c4967 assets/crafttech/models/item/instaminer_drill.json
 21521bf65fa4eca7f7351fecba888c75c091cfed assets/crafttech/models/item/kunai.json
+2cf7d169f8718a32b971bf2b93f815962dd70d97 assets/crafttech/models/item/miners_gem.json
 17f5100ca3ec9230fc1f6ab4e184fc7508a261d2 assets/crafttech/models/item/ore_extractor.json
+360bd74230b68e2ce43f82ec2306e54d413e263b assets/crafttech/models/item/pet_hypnotizer_wand.json
 068d3ebfb9199f10d08417c6b949b71abe83a43d assets/crafttech/models/item/platinum_ingot.json
 260ed48bf6b1a66f32b23b253b0cba3b256ffe05 assets/crafttech/models/item/ruby.json
 efb4ba558533497a5d8ffecbd3dc8b485dc803ba assets/crafttech/models/item/sapphire.json
 a5919cd35d4e96034a582abd6dd8f6ea05588f54 assets/crafttech/models/item/teleporter_button.json
+1ab61cf6d1df6f45243eb36171ae300e3a061c9b assets/crafttech/models/item/temporary_teleporter_pearl.json
 5e001928bf448dcfbecfa4ffd4c5246780a0d4a0 assets/crafttech/models/item/titanium_ingot.json
 d6fff6b3682e51e43f957851bdfc759c7a0893ca assets/crafttech/models/item/topaz.json
 2931953dbdac621161d4e4a9723f11f2dad8510a assets/crafttech/models/item/wall_walking_wand.json

@@ -1,4 +1,4 @@
-// 1.20.1	2024-04-15T16:01:51.5382297	Block States: crafttech
+// 1.20.1	2024-04-16T13:33:16.4940025	Block States: crafttech
 4f3d29d985585d9fcd6125e7adfa72de640aaafc assets/crafttech/blockstates/adamantine_block.json
 64c742b0fbb4a936ee46f6b1f90939b6d969bee6 assets/crafttech/blockstates/adamantine_ore.json
 f14b4dd23da577b729ebcf7047680cdfd0432fd9 assets/crafttech/blockstates/cobalt_block.json
@@ -21,6 +21,7 @@ b2e93811a0df7107edaa181ad47d72df976faec0 assets/crafttech/blockstates/coconut_tr
 c45f89b28c5d296279d77f7255cdd2336b51b502 assets/crafttech/blockstates/coconut_wall_hanging_sign.json
 a6dde03fb9cfcbb57f1e4aa128d619781cbc6052 assets/crafttech/blockstates/coconut_wall_sign.json
 76ad31a54fbd98e6514e6920fec1f99cab8e502e assets/crafttech/blockstates/coconut_wood.json
+c5634bd1716e383cfc20cf86a08fdfcf2557b66f assets/crafttech/blockstates/dash_block.json
 463791d127fbbc746b415ae4f369a633e2a4aec1 assets/crafttech/blockstates/deepslate_adamantine_ore.json
 f9c14116b57399fd9255bd3362f08abacba50d96 assets/crafttech/blockstates/deepslate_cobalt_ore.json
 100f37718641902901873a8f56fa55058e1e06ca assets/crafttech/blockstates/deepslate_platinum_ore.json
@@ -39,6 +40,7 @@ b8525600c3b81697b30f8f9f6c9bdd10c1096ba3 assets/crafttech/blockstates/nether_sap
 d0ac4880b8d5902de7e89b687f2ba15d58f4e106 assets/crafttech/blockstates/nether_topaz_ore.json
 4bc00854a0d03a3f08d47bab2fe39d4a6c101c46 assets/crafttech/blockstates/platinum_block.json
 0eab1e0b2629d8419ea29a8caeefd418c4cb8e94 assets/crafttech/blockstates/platinum_ore.json
+20b28a64b7c830830b9110f495b2f062c2306c86 assets/crafttech/blockstates/rapidity_block.json
 43f5d826c9497454ab650d4e7d08bd9d8368903d assets/crafttech/blockstates/ruby_block.json
 732fd1e2bf8e6fe11882c32ba30e402bc2c2ef8b assets/crafttech/blockstates/ruby_ore.json
 12af17ffed5f56e8f852ba68cf5c0e0afed35a8a assets/crafttech/blockstates/sapphire_block.json
@@ -91,6 +93,7 @@ b083cb9d723fe43c946826430196707bb2592d75 assets/crafttech/models/block/coconut_t
 d349a795ea3bd68eaa45b230dfc4a5a5c3ea8c9c assets/crafttech/models/block/coconut_trapdoor_top.json
 6f9eaff9cfb9f9714b4ed2877b302bc36ed06042 assets/crafttech/models/block/coconut_wood.json
 8434d4577da62818393263ca21469bedf158718d assets/crafttech/models/block/coconut_wood_horizontal.json
+05a9dcb2ed68488b4f385b9abc66f66a3d3bb212 assets/crafttech/models/block/dash_block.json
 3230d42747d72b01a7ac720ab88ba320ad6d69f3 assets/crafttech/models/block/deepslate_adamantine_ore.json
 0d1630ae1f99589f50b90b011b5536ebe3699272 assets/crafttech/models/block/deepslate_cobalt_ore.json
 e53ca2259be4c73417c459b884b8d07e045cb632 assets/crafttech/models/block/deepslate_platinum_ore.json
@@ -108,6 +111,7 @@ c566724c5c89f5d7fc66c067e0f88419efb92938 assets/crafttech/models/block/nether_ti
 6a8dd102d1f8a90a874b58b6fb28816c4a6ce1a3 assets/crafttech/models/block/nether_topaz_ore.json
 fb9e6540f4e5a764a1f328f3a96031248bf7e976 assets/crafttech/models/block/platinum_block.json
 2d31aa6f4b7e3f2bf720bd41827ba6ac64a5a29a assets/crafttech/models/block/platinum_ore.json
+0a088595b33ec55e13fca8afd0866f1da80a4d1b assets/crafttech/models/block/rapidity_block.json
 bce9ef38a28652c13484481585a87ec3473c1831 assets/crafttech/models/block/ruby_block.json
 67901620d2b75dfaa05811b1f06ebc3c8a178165 assets/crafttech/models/block/ruby_ore.json
 191e70a3e6f56a1016abc1934a98094098122c0a assets/crafttech/models/block/sapphire_block.json
@@ -132,6 +136,7 @@ aa4ed87b556262488b539e9ecfa8e248e64a6bb8 assets/crafttech/models/item/coconut_le
 c48ef0d1114e5567e5a0ae474b2b59545418329e assets/crafttech/models/item/coconut_log.json
 eeb7f9c9dca24a3fbbe522d65210bc5e69a09c93 assets/crafttech/models/item/coconut_planks.json
 9de4560b8c11899adf2f631c4f5ff09424fd7b27 assets/crafttech/models/item/coconut_wood.json
+fb49f1c10c4f2b13db245c6022362c0417a7b1cb assets/crafttech/models/item/dash_block.json
 df5e1b4522f045546806c5deb235cc4ab63ecd64 assets/crafttech/models/item/deepslate_adamantine_ore.json
 7306ea68e36e52582830783ff48a2a3b136b50ad assets/crafttech/models/item/deepslate_cobalt_ore.json
 77b0d318846f51f478997baa04f3b6e1ed4a91a4 assets/crafttech/models/item/deepslate_platinum_ore.json
@@ -150,6 +155,7 @@ a6af1d43ddc9677018846458ac3bddc8112bef45 assets/crafttech/models/item/nether_sap
 63e24157417563c3d5dcd871b628be5bdc1956f9 assets/crafttech/models/item/nether_topaz_ore.json
 1e183bb1e89e276666cadf61358425eac9a813ef assets/crafttech/models/item/platinum_block.json
 b81498fcbbd7abeb51228d1517a27de4212e07ee assets/crafttech/models/item/platinum_ore.json
+3de033f2fc3c00c1ac6842abdd59475e734b8141 assets/crafttech/models/item/rapidity_block.json
 8db596ea95a969f415cf84a81967654493ea94ed assets/crafttech/models/item/ruby_block.json
 ca9a29417b12749486920f67c028552a216e74ce assets/crafttech/models/item/ruby_ore.json
 53cbedc08d64f569cf9aa3bf50818e3d8ef8ac25 assets/crafttech/models/item/sapphire_block.json

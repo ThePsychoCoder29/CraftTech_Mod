@@ -6,12 +6,17 @@ import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.trading.MerchantOffer;
+import net.minecraftforge.event.RegisterCommandsEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.event.village.WandererTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.server.command.ConfigCommand;
 import net.mrmisc.crafttech.CraftTech;
 import net.mrmisc.crafttech.block.ModBlocks;
+import net.mrmisc.crafttech.commands.ReturnSiteCommand;
+import net.mrmisc.crafttech.commands.SetSiteCommand;
 import net.mrmisc.crafttech.item.ModItems;
 import net.mrmisc.crafttech.villager.ModVillagers;
 
@@ -19,6 +24,23 @@ import java.util.List;
 
 @Mod.EventBusSubscriber(modid = CraftTech.MOD_ID)
 public class ModEvents {
+
+    @SubscribeEvent
+    public static void onCommandsRegister(RegisterCommandsEvent event){
+        new SetSiteCommand(event.getDispatcher());
+        new ReturnSiteCommand(event.getDispatcher());
+
+        ConfigCommand.register(event.getDispatcher());
+    }
+
+    @SubscribeEvent
+    public static void onPlayerCloneEvent(PlayerEvent.Clone event){
+        if(!event.getOriginal().level().isClientSide()){
+            event.getEntity().getPersistentData().putIntArray(CraftTech.MOD_ID + "sitepos",
+                    event.getOriginal().getPersistentData().getIntArray(CraftTech.MOD_ID + "sitepos"));
+        }
+    }
+
     @SubscribeEvent
     public static void addCustomTrades(VillagerTradesEvent event) {
         if (event.getType() == ModVillagers.ORE_DIGGER.get()) {

@@ -30,9 +30,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.COBALT_INGOT);
         simpleItem(ModItems.ORE_EXTRACTOR);
         simpleItem(ModItems.KUNAI);
+        simpleItem(ModItems.TEMPORARY_TELEPORTER_PEARL);
         simpleItem(ModItems.COCONUT_COIR);
         simpleItem(ModItems.ETHEREAL_ELIXIR);
         simpleItem(ModItems.WEATHER_REMOTE);
+        simpleItem(ModItems.MINERS_GEM);
+        simpleItem(ModItems.INSTAMINER_DRILL);
+        simpleItem(ModItems.PET_HYPNOTIZER_WAND);
 
         saplingItem(ModBlocks.COCONUT_SAPLING);
         fenceItem(ModBlocks.COCONUT_FENCE, ModBlocks.COCONUT_PLANKS);

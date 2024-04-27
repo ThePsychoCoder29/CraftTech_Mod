@@ -4,11 +4,15 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.PotionItem;
+import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.mrmisc.crafttech.CraftTech;
 import net.mrmisc.crafttech.block.ModBlocks;
+import net.mrmisc.crafttech.potion.ModPotions;
 
 public class ModCreativeModTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
@@ -20,9 +24,11 @@ public class ModCreativeModTabs {
                     .title(Component.translatable("creativetab.crafttech_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.HARMONIC_PACIFIER.get());
+                        output.accept(ModItems.PET_HYPNOTIZER_WAND.get());
                         output.accept(ModItems.ORE_EXTRACTOR.get());
                         output.accept(ModItems.WALL_WALKING_WAND.get());
                         output.accept(ModItems.KUNAI.get());
+                        output.accept(ModItems.TEMPORARY_TELEPORTER_PEARL.get());
                         output.accept(ModItems.ETHEREAL_ELIXIR.get());
                         output.accept(ModItems.WEATHER_REMOTE.get());
                         output.accept(ModItems.HIPPO_SPAWN_EGG.get());
@@ -33,8 +39,9 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.TITANIUM_INGOT.get());
                         output.accept(ModItems.ADAMANTINE_INGOT.get());
                         output.accept(ModItems.COBALT_INGOT.get());
-                        output.accept(ModItems.GAMEMODE_POTION.get());
-
+                        output.accept(ModItems.MINERS_GEM.get());
+                        output.accept(ModItems.INSTAMINER_DRILL.get());
+                        output.accept(PotionUtils.setPotion(new ItemStack(Items.POTION), ModPotions.GAMEMODE_POTION.get()));
 
                         output.accept(ModBlocks.RUBY_ORE.get());
                         output.accept(ModBlocks.DEEPSLATE_RUBY_ORE.get());
@@ -88,6 +95,8 @@ public class ModCreativeModTabs {
 
                         output.accept(ModBlocks.ELEMENT_MIXER.get());
                         output.accept(ModBlocks.TRAMPOLINE_BLOCK.get());
+                        output.accept(ModBlocks.RAPIDITY_BLOCK.get());
+                        output.accept(ModBlocks.DASH_BLOCK.get());
 
                     })
                     .build());

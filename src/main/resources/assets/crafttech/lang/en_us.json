@@ -16,6 +16,9 @@
   "item.crafttech.coconut_boat" : "Coconut Boat",
   "item.crafttech.coconut_chest_boat" : "Coconut Chest Boat",
   "item.crafttech.weather_remote" : "Weather Remote",
+  "item.crafttech.miners_gem" : "Miner's Gem",
+  "item.crafttech.instaminer_drill" : "Insta-miner Drill",
+  "item.crafttech.pet_hypnotizer_wand" : "Pet Hypnotizer Wand",
 
   "item.crafttech.weather_remote_thunder": "Set Weather To Thunderstorm for 10 seconds",
   "item.crafttech.weather_remote_rain": "Set Weather To Rain for 10 seconds",
@@ -68,6 +71,8 @@
   "block.crafttech.coconut_hanging_sign" : "Coconut Hanging Sign",
   "block.crafttech.element_mixer" : "Element Mixer",
   "block.crafttech.trampoline_block" : "Trampoline Block",
+  "block.crafttech.rapidity_block" : "Rapidity Block",
+  "block.crafttech.dash_block" : "Dash Block",
 
   "effect.crafttech.ethereal": "Ethereal Effect",
   "effect.crafttech.freeze": "Freeze Effect",
@@ -79,8 +84,12 @@
   "item.minecraft.potion.effect.gamemode_potion" : "Gamemode Potion",
   "item.minecraft.splash_potion.effect.gamemode_potion" : "Splash Potion of Gamemode",
   "item.minecraft.lingering_potion.effect.gamemode_potion" : "Lingering Potion of Gamemode",
+  "item.minecraft.tipped_arrow.effect.gamemode_potion" : "Arrow of Gamemode",
 
-  "creativetab.crafttech_tab" : "CraftTech Tab",
-  "tooltip.crafttech.ore_extractor.tooltip" : "Right-click on any block. If there is any Ore in that Y axis, you will get it in your inventory"
+  "creativetab.crafttech_tab" : "CraftTech Creative Tab",
+  "tooltip.crafttech.ore_extractor_shift.tooltip" : "Right-click on any block. If there is any Ore in that Y axis, you will get it in your inventory",
+  "tooltip.crafttech.temporary_teleporter_pearl_item.tooltip": "Press SHIFT for more info",
+  "tooltip.crafttech.temporary_teleporter_pearl_item_shift.tooltip": "Right-Click to get teleported and back in 5 seconds, but get an harmful effect for 5 seconds",
+  "tooltip.crafttech.ore_extractor.tooltip": "Press SHIFT for more info"
 
 }
